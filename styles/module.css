@@ -1,0 +1,82 @@
+/**
+ * Basic cube CSS based upon http://desandro.github.io/3dtransforms/docs/cube.html
+ * and http://www.html5rubik.com/tutorial/
+ */
+.cube-collection {
+    width: 400px;
+    height: 400px;
+    /* @todo Origin must be manually adjusted based upon wall count */
+    -webkit-transform-origin: 50% 50% 100px;
+    -webkit-transform-style: preserve-3d;
+    /*-webkit-transform: translateZ( 0 ) rotateY( 0deg );*/
+    /*transition: -webkit-transform 1s;*/
+}
+
+
+.cube-wall:nth-child(2) {
+    -webkit-transform-style: preserve-3d;
+    /* @todo translateZ needs to be dynamic based upon position, look at CSS4 vars */
+    -webkit-transform: translateZ( 200px );
+    position: absolute;
+}
+
+.cube-contain {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* Could be useful for adding a cool perspective to the cube */
+    /*-webkit-perspective: 1000px;*/
+    float: left;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.cube-side {
+    width: 190px;
+    height: 190px;
+    display: block;
+    position: absolute;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    line-height: 198px;
+    text-align: center;
+    font-size: 100px;
+    color: #fafafa;
+    background: rgba(200, 200, 200, 0.7);
+}
+
+.cube-side.front {
+    -webkit-transform: rotateY( 0deg ) translateZ( 100px );
+}
+
+.cube-side.back {
+    -webkit-transform: rotateX( 180deg ) translateZ( 100px );
+}
+
+.cube-side.right {
+    -webkit-transform: rotateY(  90deg ) translateZ( 100px );
+}
+
+.cube-side.left {
+    -webkit-transform: rotateY( -90deg ) translateZ( 100px );
+}
+
+.cube-side.top {
+    -webkit-transform: rotateX(  90deg ) translateZ( 100px );
+}
+
+.cube-side.bottom {
+    -webkit-transform: rotateX( -90deg ) translateZ( 100px );
+}
+
+.screen-center {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -9px;
+}

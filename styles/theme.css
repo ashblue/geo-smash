@@ -1,0 +1,20 @@
+.cube-collection {
+    -webkit-animation-duration: 10s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.screen-center {
+    background: #000;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: translateZ( 200px ) rotateY( 0deg );
+    }
+
+    to {
+        -webkit-transform: translateZ( 200px ) rotateY( 360deg );
+    }
+}

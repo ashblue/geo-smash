@@ -40,12 +40,10 @@
     height: 190px;
     display: block;
     position: absolute;
-    border: 5px solid rgba(0, 0, 0, 0.1);
+    border: 5px solid;
     line-height: 198px;
     text-align: center;
     font-size: 100px;
-    color: #fafafa;
-    background: rgba(200, 200, 200, 0.7);
 }
 
 .cube-side.front {

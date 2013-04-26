@@ -12,7 +12,6 @@
     /*transition: -webkit-transform 1s;*/
 }
 
-
 .cube-wall:nth-child(2) {
     -webkit-transform-style: preserve-3d;
     /* @todo translateZ needs to be dynamic based upon position, look at CSS4 vars */
@@ -23,10 +22,30 @@
 .cube-contain {
     width: 200px;
     height: 200px;
-    position: relative;
     /* Could be useful for adding a cool perspective to the cube */
     /*-webkit-perspective: 1000px;*/
-    float: left;
+    position: absolute;
+    /*float: left;*/
+}
+
+.cube-contain:nth-child(1) {
+     top: 0;
+     left: 0;
+ }
+
+.cube-contain:nth-child(2) {
+    top: 0;
+    left: 200px;
+}
+
+.cube-contain:nth-child(3) {
+    top: 200px;
+    left: 0;
+}
+
+.cube-contain:nth-child(4) {
+    top: 200px;
+    left: 200px;
 }
 
 .cube {

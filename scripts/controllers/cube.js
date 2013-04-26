@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         bind: function () {
             $(VALID).click(function () {
-                $(this).detach();
+                $(this).hide();
             });
         }
     };

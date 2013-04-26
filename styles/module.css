@@ -60,13 +60,10 @@
     display: block;
     position: absolute;
     border: 5px solid;
-    line-height: 198px;
-    text-align: center;
-    font-size: 100px;
 }
 
 .cube-side.front {
-    -webkit-transform: rotateY( 0deg ) translateZ( 100px );
+    -webkit-transform: rotateY(   0deg ) translateZ( 100px );
 }
 
 .cube-side.back {

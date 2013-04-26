@@ -15,6 +15,7 @@
     background: rgba(200, 200, 200, 0.7);
 }
 
+/* @TODO This needs to be generated via JavaScript somehow... */
 @-webkit-keyframes rotate {
     from {
         -webkit-transform: translateZ( 200px ) rotateY( 0deg );

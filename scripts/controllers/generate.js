@@ -9,7 +9,7 @@ cs.generate = {
      * @param size Actual size of the cube such as 400px
      * @param sideFaces A 2 x 2 cube would have 2 sideFaces
      */
-    getCube: function (size, sideFaces) {
+    createCube: function (size, sideFaces) {
         var sideCubes = sideFaces * sideFaces,
             $collection = cs.viewCollection(size),
             $wall,
@@ -21,8 +21,8 @@ cs.generate = {
         for (var i = 0; i < sideFaces; i++) {
             // Create each wall
             $wall = cs.viewWall(size).css({
-                WebkitTransform: 'translateZ(' + wallSize - wallOffset + 'px)',
-                transform: 'translateZ(' + wallSize - wallOffset + 'px)'
+                WebkitTransform: 'translateZ( ' + (wallSize * i) + 'px )',
+                transform: 'translateZ( ' + (wallSize * i) + 'px )'
             });
 
             // inject the proper number of cubes
@@ -30,8 +30,8 @@ cs.generate = {
             for (j = 0; j < sideCubes; j++) {
                 $wall.append(
                     cs.viewCube(cubeSize).css({
-                        left: wallOffset - (cubeSize * (j % sideFaces)) + 'px',
-                        top: wallOffset - (cubeSize * Math.floor(j / sideFaces)) + 'px'
+                        left: wallSize * (j % sideFaces) + 'px',
+                        top: Math.floor(j / sideFaces) * wallSize + 'px'
                     })
                 );
             }

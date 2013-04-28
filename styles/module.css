@@ -12,11 +12,13 @@
     /*transition: -webkit-transform 1s;*/
 }
 
-.cube-wall:nth-child(2) {
+.cube-wall {
     -webkit-transform-style: preserve-3d;
-    /* @todo translateZ needs to be dynamic based upon position, look at CSS4 vars */
-    -webkit-transform: translateZ( 200px );
     position: absolute;
+}
+
+.cube-wall:nth-child(2) {
+    -webkit-transform: translateZ( 200px );
 }
 
 .cube-contain {
